@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&family=Raleway:wght@100;200;300;400;500;700;900&display=swap");
+
+/* font-family: 'Raleway', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem; /*29px*/
+}
+#navbar {
+  background-color: var(--main-red);
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar__menu li {
+  list-style: none;
+}
+.navbar__menu a {
+  display: block;
+  text-decoration: none;
+  color: var(--main-white);
+  padding: 20px 30px;
+  font-size: 1rem;
+}
+.navbar__menu a:hover {
+  background-color: var(--main-blue);
+}
+
+.welcome-section {
+  background-color: var(--main-gray);
+  height: 100vh;
+  padding: 0.1px;
+}
+
+.welcome-section__title {
+  margin-top: 250px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: var(--main-white);
+  font-size: 4rem;
+}
+.welcome-section__subtitle {
+  color: var(--main-red);
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 2rem;
+}
+/*
+    PROJECTS
+*/
+
+.projects {
+  background-color: var(--main-blue);
+  padding: 10rem 2rem;
+  text-align: center;
+}
+.project__heading {
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto 6rem auto;
+  max-width: 640px;
+  text-align: center;
+  color: var(--main-white);
+  border-bottom-color: var(--main-white);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.projects__bigbox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  padding: 20px 0;
+}
+.project__image {
+  width: 100%;
+  object-fit: cover;
+  height: calc(100% - 4.8rem);
+  display: block;
+}
+.project__title {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem 0.5rem;
+  color: var(--main-white);
+  background-color: var(--main-gray);
+}
+
+.code {
+  color: var(--main-gray);
+  transition: color 0.3s ease-out;
+}
+
+.project__item {
+  text-decoration: none;
+  background-color: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+.project__item:hover .code {
+  color: #ff7f50;
+}
+.show__all-btn {
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  transition: background-color 0.3s ease-out;
+}
+.show__all-btn:hover {
+  background-color: var(--main-red);
+}
+/*
+FOOTER
+*/
+.footer {
+  background-color: var(--main-gray);
+}
+.main__footer {
+  padding: 6rem 2rem 9.5rem 2rem;
+  color: var(--main-white);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main__footer__heading {
+  font-size: 3.8rem;
+  font-family: "Raleway", sans-serif;
+}
+.main__footer__title {
+  font-size: 1.3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  padding-top: 0.8rem;
+  padding-bottom: 3.4rem;
+}
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__scn {
+  text-decoration: none;
+  color: var(--main-white);
+  font-size: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+.footer__scn:hover {
+  transform: translateY(8px);
+}
+.scn {
+  padding-right: 0.5rem;
+}
+.submain__footer {
+  padding: 2.5rem 0 1.5rem 0;
+  text-align: center;
+}
+.submain__footer {
+    font-size: 1.1rem;
+    border-top-color: var(--main-red);
+    border-top-width: 3px;
+    border-top-style: solid;
+    color: var(--main-white);
+    padding: 2.93rem 1.5rem;
+}
+.submain__minifooter{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin:0 auto;
+}
+.freecodecamp {
+  color: var(--main-white);
+  text-decoration: none;
+}
+.freecodecamp i {
+  padding-left: 0.5rem;
+  text-decoration: underline;
+}
+/*
+    MEDIA QUERIES
+*/
+@media screen and (max-width: 1152px) {
+  .projects__bigbox {  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3.5rem;   
+}
+.project__title {
+  padding: 1.5rem 0.5rem;
+}
+}
+
+@media screen and (max-width:845px) {
+    .projects {
+  background-color: var(--main-blue);
+  padding: 5rem 2rem 1.8rem;
+  text-align: center;
+}
+.welcome-section__title {
+  margin-top: 150px;
+ 
+}
+.projects__bigbox {  
+  margin-bottom: 2rem;  
+}
+.project__heading {
+  margin: 0 auto 2rem auto;  
+}
+.welcome-section {
+  height: 50vh;
+}
+
+    .footer__social {
+  justify-content: space-around;
+  flex-wrap: wrap; 
+}
+.footer__scn{
+    margin:5px 0;
+}
+}
+@media screen and (max-width:460px){
+    .main__footer__heading {
+  font-size: 2.8rem;
+}
+    .submain__minifooter{
+    flex-direction: column;
+}
+.submain__footer__title{
+    margin-bottom: 0.9rem;
+}
+}
